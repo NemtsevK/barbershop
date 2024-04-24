@@ -66,15 +66,15 @@
   }
 
 
-  .&--fast {
+  &--fast {
     background-image: url("../images/icons/advantage-fast.svg");
   }
 
-  .&--cool {
+  &--cool {
     background-image: url("../images/icons/advantage-cool.svg");
   }
 
-  .&--price {
+  &--price {
     background-image: url("../images/icons/advantage-cost.svg");
   }
 }
