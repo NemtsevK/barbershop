@@ -1,0 +1,59 @@
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.header__logo {
+  height: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+@media (min-width: $tablet-width) {
+  .header__logo {
+    order: 2;
+    height: 400px;
+    align-items: flex-start;
+
+    background-image: url("../images/decorative/background-tablet.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    img {
+      @include size(370px, 101px);
+      margin-top: 55px;
+    }
+  }
+
+  .header__logo--inner {
+    height: 220px;
+
+    img {
+      margin-top: 40px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .header__logo {
+    height: 648px;
+    background-image: url("../images/decorative/background-desktop.jpg");
+
+    img {
+      height: 153px;
+    }
+  }
+
+  .header__logo--inner {
+    height: 315px;
+
+    img {
+      margin-top: 55px;
+    }
+  }
+}

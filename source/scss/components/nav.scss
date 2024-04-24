@@ -1,0 +1,133 @@
+@use "../base/variables" as *;
+
+.nav {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  height: 50px;
+  margin: 0 auto;
+  background-color: #826550;
+}
+
+.nav__toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 70px;
+  height: 100%;
+  background-color: #6a4d38;
+  border: none;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 17px;
+    top: 15px;
+    width: 36px;
+    height: 2px;
+    background-color: #fff;
+    box-shadow: 0 9px 0 0 #fff, 0 18px 0 0 #fff;
+  }
+
+  &:hover,
+  &:active {
+    background-color: #624530;
+  }
+
+  &:active {
+    &::before,
+    &::after {
+      opacity: 0.3;
+    }
+  }
+}
+
+.nav__toggle--toggled {
+  right: unset;
+  left: 0;
+
+  &::before {
+    top: 23px;
+    box-shadow: none;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 17px;
+    top: 23px;
+    width: 36px;
+    height: 2px;
+    background-color: #fff;
+    transform: rotate(-45deg);
+  }
+}
+
+.nav__wrapper {
+  position: absolute;
+  top: 0;
+  right: 70px;
+  width: calc(100% - 140px);
+  height: 50px;
+  overflow: hidden;
+  text-align: center;
+  z-index: 2;
+}
+
+.nav.no-js {
+  height: auto;
+}
+
+.no-js .nav__wrapper {
+  position: static;
+  height: auto;
+}
+
+@media (max-width: $tablet-width - 1px) {
+  .nav__toggle--toggled + .nav__wrapper {
+    height: auto;
+    width: calc(100% - 70px);
+    right: 0;
+    text-align: left;
+
+    .site-list a {
+      padding-left: 20px;
+      border-top: 1px solid #886e5b;
+      border-bottom: 1px solid #71543f;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .nav__toggle {
+    display: none;
+  }
+
+  .nav {
+    max-width: none;
+    height: auto;
+    background-color: #000;
+  }
+
+  .nav__wrapper {
+    position: static;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 40px;
+    width: 100%;
+    max-width: 780px;
+    height: auto;
+    overflow: visible;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .nav__wrapper {
+    max-width: 960px;
+    padding: 0;
+  }
+}

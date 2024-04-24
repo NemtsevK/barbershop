@@ -1,0 +1,21 @@
+@use "../base/variables" as *;
+
+.page {
+  height: 100%;
+}
+
+.page__body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 18px;
+  line-height: 27px;
+  font-family: "PT_SansNarrow", "Arial", sans-serif;
+  color: #f7f4f1;
+  font-style: normal;
+  background-color: $bg-darkgrey;
+
+  @media (min-width: $tablet-width) {
+    background-color: #353535;
+  }
+}

@@ -1,0 +1,104 @@
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+
+.advantages {
+  @include corner(40px, "242424");
+  border-bottom: 1px solid transparent;
+
+  @media (min-width: $tablet-width) {
+    @include corner(40px, "353535");
+  }
+}
+
+.advantages__wrapper {
+
+  @media (min-width: $tablet-width) {
+    max-width: 640px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 960px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+
+}
+
+.advantages__list {
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+  }
+
+
+}
+
+
+.advantages__item {
+  padding-top: 145px;
+  text-align: center;
+  background-size: 95px 94px;
+  background-repeat: no-repeat;
+  background-position: center 25px;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    padding: 20px 0 20px 150px;
+    text-align: left;
+    background-position: left 30px;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #4a4a4a;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    border-bottom: none;
+    padding: 125px 42px 0;
+    text-align: center;
+    background-position: top center;
+
+    &:not(:last-child) {
+      border-right: 1px solid #4a4a4a;
+      border-bottom: none;
+    }
+  }
+
+
+  .&--fast {
+    background-image: url("../images/icons/advantage-fast.svg");
+  }
+
+  .&--cool {
+    background-image: url("../images/icons/advantage-cool.svg");
+  }
+
+  .&--price {
+    background-image: url("../images/icons/advantage-cost.svg");
+  }
+}
+
+
+.advantages__title {
+  margin: 10px 0 0;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.advantages__description {
+  padding: 0 17%;
+  margin-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    font-size: 20px;
+    line-height: 27px;
+  }
+}
+
+.advantages__toggles {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}

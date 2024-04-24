@@ -1,0 +1,64 @@
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+
+.social__title {
+  display: none;
+}
+
+.social__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  @include reset-list;
+}
+
+.social__item {
+  width: 33.333%
+}
+
+.social__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include size(100%, 101px);
+  border: 1px solid #3e3e3e;
+  font-size: 0;
+
+  &:hover {
+    border-color: #515151;
+  }
+
+  &:active {
+    svg {
+      opacity: 0.3;
+    }
+  }
+}
+
+.social__ico {
+  @include size(40px);
+}
+
+@media (min-width: $desktop-width) {
+  .social__title {
+    display: block;
+    font-weight: normal;
+  }
+
+  .social__list {
+    margin-top: 10px;
+  }
+
+  .social__item {
+    width: auto;
+    margin: 6px;
+  }
+
+  .social__link {
+    @include size(50px);
+  }
+
+  .social__ico {
+    @include size(19px);
+  }
+}
