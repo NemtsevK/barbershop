@@ -2,7 +2,7 @@
   "name": "barbershop",
   "author": "Nemtsev Konstantin <nemtsevk@hotmail.com> (https://github.com/nemtsev-k)",
   "description": "Проект «Барбершоп Бородинский» от HTML Academy",
-  "homepage": "https://nemtsev-k.github.io/cat-energy/",
+  "homepage": "https://nemtsev-k.github.io/barbershop/",
   "private": true,
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
