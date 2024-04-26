@@ -5,13 +5,21 @@
   padding: 32px 20px 37px;
   background-color: $bg-lightgrey;
   color: #000;
+
+  @media (min-width: $tablet) {
+    padding: 50px 70px 63px;
+  }
 }
 
 .login-form__title {
   margin: 0 0 25px;
+
+  @media (min-width: $tablet) {
+    text-align: center;
+  }
 }
 
-.login-form p {
+.login-form__text {
   margin: 25px 0;
   text-align: center;
 }
@@ -21,34 +29,13 @@
   display: block;
   height: auto;
   margin-bottom: 6px;
+}
 
-  input {
-    width: 280px;
-    padding: 15px;
-    color: #000;
-    background-color: #fff;
-    border: 1px solid #e5ddd5;
-
-    &::placeholder {
-      color: #000;
-    }
-
-    &:hover {
-      border-color: #d5c9bd;
-    }
-
-    &:focus {
-      outline: none;
-      border-color: #999999;
-    }
-  }
-
-  svg {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 19px;
-  }
+.login-form__icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 19px;
 }
 
 .login-form__row {
@@ -57,29 +44,7 @@
   align-items: center;
   margin-top: 26px;
 
-  [type="checkbox"] {
-    @include visually-hidden();
-  }
-
-  label {
-    position: relative;
-    padding-left: 43px;
-    cursor: pointer;
-    line-height: 33px;
-    user-select: none;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      @include size(33px);
-      border: 1px solid #e5ddd5;
-      background-color: #fff;
-    }
-  }
-
-  :checked + label::after {
+  &:checked + .login-form__label::after {
     content: "";
     position: absolute;
     top: 9px;
@@ -88,16 +53,61 @@
     background-image: url("../images/sprite.svg#checkbox");
   }
 
-  :not(:disabled) + label:hover {
+  &:not(:disabled) + .login-form__label:hover {
     &::before {
       border-color: #d5c9bd;
     }
   }
 
-  :not(:disabled) + label:active {
+  &:not(:disabled) + .login-form__label:active {
     &::before {
       background-color: #d5c9bd;
     }
+  }
+}
+
+.login-form__label {
+  position: relative;
+  padding-left: 43px;
+  cursor: pointer;
+  line-height: 33px;
+  user-select: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include size(33px);
+    border: 1px solid #e5ddd5;
+    background-color: #ffffff;
+  }
+}
+
+.login-form__input {
+  width: 280px;
+  padding: 15px;
+  color: #000;
+  background-color: #ffffff;
+  border: 1px solid #e5ddd5;
+
+  @media (min-width: $tablet) {
+    width: 320px;
+    padding: 23px 25px;
+    font-size: 24px;
+  }
+
+  &::placeholder {
+    color: #000;
+  }
+
+  &:hover {
+    border-color: #d5c9bd;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: #999999;
   }
 }
 
@@ -107,8 +117,12 @@
 
 .login-form__submit {
   width: 130px;
-  color: #fff;
+  color: #ffffff;
   background-color: #826550;
+
+  @media (min-width: $tablet) {
+    width: 100%;
+  }
 
   &:not(:disabled):hover,
   &:active {
@@ -116,7 +130,7 @@
   }
 
   &:active {
-    color: rgba(#fff, 0.3);
+    color: rgba(#ffffff, 0.3);
   }
 
   &:disabled {
@@ -126,28 +140,9 @@
 
 .login-form__close {
   width: 130px;
-}
 
-@media (min-width: $tablet-width) {
-  .login-form {
-    padding: 50px 70px 63px;
-  }
-
-  .login-form__title {
-    text-align: center;
-  }
-
-  .login-form__input-wrapper input {
-    width: 320px;
-    padding: 23px 25px;
-    font-size: 24px;
-  }
-
-  .login-form__submit {
-    width: 100%;
-  }
-
-  .login-form__close {
+  @media (min-width: $tablet) {
+    border: none;
     position: absolute;
     top: 62px;
     right: -95px;
@@ -155,40 +150,56 @@
     padding: 0;
     font-size: 0;
     background-color: transparent;
-    border: none;
+  }
 
-    &::before,
-    &::after {
+  &::before {
+    @media (min-width: $tablet) {
       content: "";
       position: absolute;
       top: 10px;
       left: -5px;
       width: 36px;
       height: 2px;
-      background-color: #fff;
-    }
-
-    &::before {
+      background-color: #ffffff;
       transform: rotate(45deg);
     }
+  }
 
-    &::after {
+  &::after {
+    @media (min-width: $tablet) {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: -5px;
+      width: 36px;
+      height: 2px;
+      background-color: #ffffff;
       transform: rotate(-45deg);
     }
+  }
 
-    &:hover {
+  &:hover {
+    @media (min-width: $tablet) {
       background-color: transparent;
-      &::before,
-      &::after {
+    }
+
+    &::before,
+    &::after {
+      @media (min-width: $tablet) {
         background-color: #826550;
       }
     }
+  }
 
-    &:active {
+  &:active {
+    @media (min-width: $tablet) {
       background-color: transparent;
-      &::before,
-      &::after {
-        background-color: rgba(#fff, 0.3);
+    }
+
+    &::before,
+    &::after {
+      @media (min-width: $tablet) {
+        background-color: rgba(#ffffff, 0.3);
       }
     }
   }

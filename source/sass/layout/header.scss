@@ -12,47 +12,48 @@
   align-items: center;
   justify-content: center;
   padding-top: 10px;
-}
 
-@media (min-width: $tablet-width) {
-  .header__logo {
+  @media (min-width: $tablet) {
     order: 2;
     height: 400px;
     align-items: flex-start;
-
     background-image: url("../images/decorative/background-tablet.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-
-    img {
-      @include size(370px, 101px);
-      margin-top: 55px;
-    }
   }
 
-  .header__logo--inner {
-    height: 220px;
+  @media (min-width: $desktop) {
+    height: 648px;
+    background-image: url("../images/decorative/background-desktop.jpg");
+  }
 
-    img {
-      margin-top: 40px;
+  &--inner {
+    @media (min-width: $tablet) {
+      height: 220px;
+    }
+
+    @media (min-width: $desktop) {
+      height: 315px;
     }
   }
 }
 
-@media (min-width: $desktop-width) {
-  .header__logo {
-    height: 648px;
-    background-image: url("../images/decorative/background-desktop.jpg");
-
-    img {
-      height: 153px;
-    }
+.header__logo-image {
+  @media (min-width: $tablet) {
+    @include size(370px, 101px);
+    margin-top: 55px;
   }
 
-  .header__logo--inner {
-    height: 315px;
+  @media (min-width: $desktop) {
+    height: 153px;
+  }
 
-    img {
+  &--inner {
+    @media (min-width: $tablet) {
+      margin-top: 40px;
+    }
+
+    @media (min-width: $desktop) {
       margin-top: 55px;
     }
   }

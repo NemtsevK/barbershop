@@ -27,22 +27,20 @@
   background: none;
   border: 1px solid #a5a5a5;
   transform: rotate(45deg);
-}
 
-.slider__toggle:not(:last-child) {
-  margin-right: 25px;
-}
-
-.slider__toggle--active {
-  background-color: #fff;
-}
-
-.slider--dark {
-  .slider__toggle {
-    border-color: #989795;
+  &:not(:last-child) {
+    margin-right: 25px;
   }
 
-  .slider__toggle--active {
+  &--active {
+    background-color: #ffffff;
+  }
+}
+
+.slider--dark .slider__toggle {
+  border-color: #989795;
+
+  &--active {
     background-color: #353535;
   }
 }

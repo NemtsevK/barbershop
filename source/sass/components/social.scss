@@ -3,6 +3,11 @@
 
 .social__title {
   display: none;
+
+  @media (min-width: $desktop) {
+    display: block;
+    font-weight: 400;
+  }
 }
 
 .social__list {
@@ -10,10 +15,19 @@
   justify-content: center;
   flex-wrap: wrap;
   @include reset-list;
+
+  @media (min-width: $desktop) {
+    margin-top: 10px;
+  }
 }
 
 .social__item {
-  width: 33.333%
+  width: 33.333%;
+
+  @media (min-width: $desktop) {
+    width: auto;
+    margin: 6px;
+  }
 }
 
 .social__link {
@@ -24,41 +38,23 @@
   border: 1px solid #3e3e3e;
   font-size: 0;
 
+  @media (min-width: $desktop) {
+    @include size(50px);
+  }
+
   &:hover {
     border-color: #515151;
   }
 
   &:active {
-    svg {
-      opacity: 0.3;
-    }
+    opacity: 0.3;
   }
 }
 
-.social__ico {
+.social__link-image {
   @include size(40px);
-}
 
-@media (min-width: $desktop-width) {
-  .social__title {
-    display: block;
-    font-weight: normal;
-  }
-
-  .social__list {
-    margin-top: 10px;
-  }
-
-  .social__item {
-    width: auto;
-    margin: 6px;
-  }
-
-  .social__link {
-    @include size(50px);
-  }
-
-  .social__ico {
+  @media (min-width: $desktop) {
     @include size(19px);
   }
 }

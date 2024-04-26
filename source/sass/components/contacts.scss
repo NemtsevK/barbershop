@@ -4,10 +4,31 @@
   font-size: 18px;
   line-height: 27px;
   padding: 0 20px;
+
+  @media (min-width: $tablet) {
+    text-align: left;
+    padding: 0;
+  }
 }
 
 .contacts__title {
-  font-weight: bold;
+  font-weight: 700;
+
+  @media (min-width: $tablet) {
+    text-transform: uppercase;
+  }
+}
+
+.contacts__text {
+  @media (min-width: $tablet) {
+    margin-top: 0.5em;
+  }
+}
+
+.contacts__text-break {
+  @media (min-width: $tablet) {
+    display: none;
+  }
 }
 
 .contacts__phone {
@@ -16,58 +37,39 @@
   margin-top: 20px;
   color: inherit;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 18px;
   border: 1px solid #3e3e3e;
 
+  @media (min-width: $tablet) {
+    display: inline;
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+    border: none;
+  }
+
   &:hover {
     border-color: #515151;
+
+    @media (min-width: $tablet) {
+      text-decoration: underline;
+    }
   }
 
   &:active {
-    color: rgba(#fff, 0.3);
+    color: rgba(#ffffff, 0.3);
+
+    @media (min-width: $tablet) {
+      opacity: 0.6;
+    }
   }
 }
 
 .contacts__phone-mobile {
   display: none;
-}
 
-@media (min-width: $tablet-width) {
-  .contacts {
-    text-align: left;
-    padding: 0;
-  }
-
-  .contacts__title {
-    text-transform: uppercase;
-  }
-
-  .contacts__text {
-    margin-top: 0.5em;
-  }
-
-  .contacts__text br {
-    display: none;
-  }
-
-  .contacts__phone {
-    display: inline;
-    padding: 0;
-    margin: 0;
-    font-weight: normal;
-    border: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
-
-    &:active {
-      opacity: 0.6;
-    }
-  }
-
-  .contacts__phone-mobile {
+  @media (min-width: $tablet) {
     display: inline;
   }
 }

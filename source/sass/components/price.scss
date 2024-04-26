@@ -6,53 +6,55 @@
   padding-bottom: 20px;
   background-color: #353535;
   @include corner(40px, "353535");
-}
 
-.price__wrapper {
-  margin: 0 auto;
-  width: 280px;
-}
-
-.price__table {
-  margin-bottom: 20px;
-}
-
-@media (min-width: $tablet-width) {
-  .price {
+  @media (min-width: $tablet) {
     padding-bottom: 55px;
   }
 
-  .price::after {
-    display: none;
-  }
-
-  .price__wrapper {
-    width: 640px;
-  }
-
-  .price__table {
-    margin-bottom: 10px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .price__wrapper {
+  @media (min-width: $desktop) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     width: 960px;
   }
 
-  .price__title {
-    width: 100%;
+  &::after {
+    @media (min-width: $tablet) {
+      display: none;
+    }
+  }
+}
+
+.price__wrapper {
+  margin: 0 auto;
+  width: 280px;
+
+  @media (min-width: $tablet) {
+    width: 640px;
+  }
+}
+
+.price__table {
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 10px;
   }
 
-  .price__table {
+  @media (min-width: $desktop) {
     width: 630px;
     margin: 0;
   }
+}
 
-  .price__discount {
+.price__title {
+  @media (min-width: $desktop) {
+    width: 100%;
+  }
+}
+
+.price__discount {
+  @media (min-width: $desktop) {
     width: 269px;
   }
 }

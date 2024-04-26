@@ -7,48 +7,48 @@
   background-color: $bg-lightgrey;
   border-top: 1px solid transparent;
   @include corner(40px, "f8f5f2");
+
+  @media (min-width: $tablet) {
+    padding-top: 30px;
+    padding-bottom: 75px;
+    @include corner-reverse(65px, "f8f5f2");
+  }
+
+  &::after {
+    @media (min-width: $tablet) {
+      display: none;
+    }
+  }
 }
 
 .appointment__wrapper {
   padding: 0;
   margin: auto;
   width: 280px;
-}
 
-.appointment__to-index {
-  display: none;
-}
-
-@media (min-width: $tablet-width) {
-  .appointment {
-    padding-top: 30px;
-    padding-bottom: 75px;
-    @include corner-reverse(65px, "f8f5f2");
-
-    &::after {
-      display: none;
-    }
-  }
-
-  .appointment__wrapper {
+  @media (min-width: $tablet) {
     position: relative;
     width: 640px;
   }
 
-  .appointment__to-index {
+  @media (min-width: $desktop) {
+    width: 960px;
+  }
+}
+
+.appointment__to-index {
+  display: none;
+
+  @media (min-width: $tablet) {
     display: block;
     position: absolute;
     right: 0;
     top: -15px;
   }
-
-  .appointment___form {
-    padding-top: 30px;
-  }
 }
 
-@media (min-width: $desktop-width) {
-  .appointment__wrapper {
-    width: 960px;
+.appointment___form {
+  @media (min-width: $tablet) {
+    padding-top: 30px;
   }
 }

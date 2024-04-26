@@ -5,59 +5,65 @@
   font-size: 20px;
 }
 
-.price-table tr {
+.price-table__row {
   display: flex;
   flex-wrap: wrap;
   padding-bottom: 15px;
-}
 
-.price-table__num {
-  display: none;
-}
-
-.price-table__service {
-  flex-grow: 1;
-  font-weight: bold;
-}
-
-.price-table__wash {
-  width: 100%;
-  order: 1;
-}
-
-.price-table__hidden-brackets {
-  &::before {
-    content: "(";
-  }
-
-  &::after {
-    content: ")";
-  }
-}
-
-.price-table__cost {
-  width: 80px;
-}
-
-@media (min-width: $tablet-width) {
-  .price-table tr {
+  @media (min-width: $tablet) {
     display: table-row;
   }
+}
 
-  .price-table td {
+.price-table__cell {
+
+  @media (min-width: $tablet) {
     width: auto;
     padding: 14px 15px 15px;
     border: 1px solid #484848;
   }
 
-  .price-table__num {
-    display: table-cell;
-    text-align: center;
-    color: rgba(#fff, 0.3);
+  &--num {
+    display: none;
+
+    @media (min-width: $tablet) {
+      display: table-cell;
+      text-align: center;
+      color: rgba(#ffffff, 0.3);
+    }
   }
 
-  .price-table__hidden-brackets::before,
-  .price-table__hidden-brackets::after {
-    display: none;
+  &--service {
+    flex-grow: 1;
+    font-weight: 700;
+  }
+
+  &--wash {
+    width: 100%;
+    order: 1;
+  }
+
+  &--cost {
+    width: 80px;
   }
 }
+
+.price-table__cell-wash {
+  &::before {
+    content: "(";
+
+    @media (min-width: $tablet) {
+      display: none;
+    }
+  }
+
+  &::after {
+    content: ")";
+
+    @media (min-width: $tablet) {
+      display: none;
+    }
+  }
+}
+
+

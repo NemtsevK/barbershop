@@ -1,0 +1,46 @@
+@use "../base/variables" as *;
+
+.button {
+  display: block;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  border: 1px solid #e5ddd5;
+
+  &:not(:disabled):hover {
+    border-color: #d5cabe;
+  }
+
+  &:active {
+    background-color: #d5c9bd;
+    color: rgba(#000, 0.3);
+
+    .button__image {
+      fill: rgba(#000, 0.3);
+    }
+  }
+
+  &:disabled {
+    .button__image {
+      fill: rgba(#000, 0.3);
+    }
+  }
+
+  &--dark {
+    color: #ffffff;
+    border-color: #3e3e3e;
+
+    &:not(:disabled):hover {
+      border-color: #515151;
+    }
+
+    &:active {
+      background-color: #252525;
+      color: rgba(#ffffff, 0.3);
+    }
+  }
+}

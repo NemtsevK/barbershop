@@ -27,8 +27,8 @@
     top: 15px;
     width: 36px;
     height: 2px;
-    background-color: #fff;
-    box-shadow: 0 9px 0 0 #fff, 0 18px 0 0 #fff;
+    background-color: #ffffff;
+    box-shadow: 0 9px 0 0 #ffffff, 0 18px 0 0 #ffffff;
   }
 
   &:hover,
@@ -61,7 +61,7 @@
     top: 23px;
     width: 36px;
     height: 2px;
-    background-color: #fff;
+    background-color: #ffffff;
     transform: rotate(-45deg);
   }
 }
@@ -86,7 +86,7 @@
   height: auto;
 }
 
-@media (max-width: $tablet-width - 1px) {
+@media (max-width: $tablet - 1px) {
   .nav__toggle--toggled + .nav__wrapper {
     height: auto;
     width: calc(100% - 70px);
@@ -101,7 +101,7 @@
   }
 }
 
-@media (min-width: $tablet-width) {
+@media (min-width: $tablet) {
   .nav__toggle {
     display: none;
   }
@@ -125,7 +125,7 @@
   }
 }
 
-@media (min-width: $desktop-width) {
+@media (min-width: $desktop) {
   .nav__wrapper {
     max-width: 960px;
     padding: 0;

@@ -15,14 +15,14 @@
   text-decoration: none;
 }
 
-.user-list__ico {
+.user-list__icon {
   fill: rgba(255, 255, 255, 0.3);
   position: relative;
   top: 2px;
   margin-right: 5px;
 }
 
-@media (min-width: $tablet-width) {
+@media (min-width: $tablet) {
   .user-list {
     background-color: transparent;
   }
@@ -44,20 +44,20 @@
     }
   }
 
-  .user-list__ico {
+  .user-list__icon {
     top: 0;
   }
 }
 
-@media (min-width: $desktop-width) {
+@media (min-width: $desktop) {
   .user-list__item a {
     padding-right: 20px;
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 700;
     text-transform: uppercase;
 
     &:hover {
-      background-color: #fff;
+      background-color: #ffffff;
       color: #000;
 
       svg {
@@ -74,7 +74,7 @@
     }
   }
 
-  .user-list__ico {
+  .user-list__icon {
     margin-right: 15px;
   }
 }

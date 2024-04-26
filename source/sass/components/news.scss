@@ -7,6 +7,22 @@
   color: #000;
   background-color: $bg-lightgrey;
   border-bottom: 1px solid #e5ddd5;
+
+  @media (min-width: $tablet) {
+    padding-top: 60px;
+  }
+}
+
+.news__wrapper {
+  @media (min-width: $tablet) {
+    position: relative;
+    padding: 0;
+    max-width: 640px;
+  }
+
+  @media (min-width: $desktop) {
+    min-width: 960px;
+  }
 }
 
 .news__title {
@@ -15,17 +31,39 @@
 
 .news__list {
   @include reset-list;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+  }
 }
 
 .news__item {
   padding: 20px 0;
 
+  @media (min-width: $tablet) {
+    width: 50%;
+  }
+
+  @media (min-width: $desktop) {
+    width: 33.333%;
+  }
+
   &:first-child {
     border-bottom: 1px solid #e5ddd5;
+
+    @media (min-width: $tablet) {
+      border-bottom: none;
+    }
   }
 
   &:last-child {
     display: none;
+
+    @media (min-width: $desktop) {
+      display: block;
+    }
   }
 }
 
@@ -53,7 +91,7 @@
     }
 
     .news__date {
-      color: rgba(#fff, 0.3);
+      color: rgba(#ffffff, 0.3);
 
       background-color: #6a4d38;
       @include corner(10px, "6a4d38");
@@ -67,7 +105,7 @@
   margin-bottom: 20px;
   width: 50px;
   height: 50px;
-  color: #fff;
+  color: #ffffff;
   font-size: 16px;
   line-height: 16px;
   text-align: center;
@@ -82,62 +120,24 @@
   margin-bottom: 3px;
   font-size: 30px;
   line-height: 20px;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .news__text {
   margin: 0;
-}
 
-@media (min-width: $tablet-width) {
-  .news {
-    padding-top: 60px;
-  }
-
-  .news__wrapper {
-    position: relative;
-    padding: 0;
-    max-width: 640px;
-  }
-
-  .news__list {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 50px;
-  }
-
-  .news__item {
-    width: 50%;
-
-    &:first-child {
-      border-bottom: none;
-    }
-  }
-
-  .news__text {
+  @media (min-width: $tablet) {
     padding-right: 30px;
   }
+}
 
-  .news__to-all {
+.news__to-all {
+  @media (min-width: $tablet) {
     position: absolute;
     top: -10px;
     right: 0;
     width: 160px;
     padding-left: 0;
     padding-right: 0;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .news__wrapper {
-    min-width: 960px;
-  }
-
-  .news__item {
-    width: 33.333%;
-
-    &:last-child {
-      display: block;
-    }
   }
 }
