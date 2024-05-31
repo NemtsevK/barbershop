@@ -1,16 +1,11 @@
 <!DOCTYPE html>
+{% set currentPage = 'photo' %}
 <html class="page" lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Барбершоп &laquo;Бородинский&raquo;</title>
-  <link rel="icon" href="favicon.ico">
-  <link rel="icon" href="images/favicons/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="images/favicons/apple.png">
-  <link rel="manifest" href="manifest.webmanifest">
-  <link rel="preload" href="fonts/pt-sans-narrow.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/pt-sans-narrow-bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/style.css">
+  <title>«Бородинский». Наши работы</title>
+  {% include 'templates/_head.html' %}
 </head>
 <body class="page__body">
 <header class="header">
@@ -18,7 +13,7 @@
     <picture>
       <source media="(min-width: 1200px)" srcset="images/brand/logo-desktop.svg">
       <source media="(min-width: 768px)" srcset="images/brand/logo-tablet.svg">
-      <img class="header__logo-image header__logo-image--inner" src="images/brand/logo-mobile.svg" width="226" height="30" alt="Барбершоп &laquo;Бородинский&raquo;">
+      <img class="header__logo-image header__logo-image--inner" src="images/brand/logo-mobile.svg" width="226" height="30" alt="Барбершоп «Бородинский»">
     </picture>
   </a>
   <nav class="nav no-js">
@@ -229,77 +224,8 @@
     </div>
   </section>
 </main>
-<footer class="footer">
-  <div class="footer__wrapper">
-    <div class="footer__contacts contacts">
-      <b class="contacts__title">Барбершоп &laquo;Бородинский&raquo;</b>
-      <p class="contacts__text">
-        г. Санкт-Петербург, <br>ул. Большая Конюшенная 19/8<br>
-        <a class="contacts__phone" href="tel:+78125556666">
-          <span class="contacts__phone-mobile">Тел.:</span> +7 (812) 555-66-66
-        </a>
-      </p>
-    </div>
-    <div class="footer__social social">
-      <b class="social__title">Давайте дружить!</b>
-      <ul class="social__list">
-        <li class="social__item">
-          <a class="social__link" href="https://vk.com/htmlacademy" aria-label="Мы в Вконтакте">
-            <svg class="social__link-image" width="40" height="40">
-              <use xlink:href="images/sprite.svg#vk"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link" href="https://www.facebook.com/htmlacademy" aria-label="Мы в Фейсбуке">
-            <svg class="social__link-image" width="40" height="40">
-              <use xlink:href="images/sprite.svg#facebook"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link" href="https://www.instagram.com/htmlacademy" aria-label="Мы в Инстаграме">
-            <svg class="social__link-image" width="40" height="40">
-              <use xlink:href="images/sprite.svg#instagram"></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
-    </div>
-    <div class="footer__copyright copyright">
-      <b class="copyright__text">Разработано:</b>
-      <a class="button button--dark copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-    </div>
-  </div>
-</footer>
-<section class="modal modal__login login-form">
-  <h2 class="login-form__title title">Личный кабинет</h2>
-  <p class="login-form__text">Введите свой логин и пароль, чтобы войти</p>
-  <form action="https://echo.htmlacademy.ru" class="login-form__form" method="POST">
-    <label class="login-form__input-wrapper login-form__input-wrapper--login">
-      <input class="login-form__input" type="text" name="login" placeholder="Логин" required>
-      <svg class="login-form__icon" width="15" height="15">
-        <use xlink:href="images/sprite.svg#user"></use>
-      </svg>
-    </label>
-    <label class="login-form__input-wrapper login-form__input-wrapper--password">
-      <input class="login-form__input" type="password" name="password" placeholder="Пароль" required>
-      <svg class="login-form__icon" width="15" height="17">
-        <use xlink:href="images/sprite.svg#lock"></use>
-      </svg>
-    </label>
-    <div class="login-form__row">
-      <input id="remember" type="checkbox" name="remember" value="true">
-      <label class="login-form__label" for="remember">Запомните меня</label>
-      <a href="#" class="login-form__forgot">Я забыл пароль!</a>
-    </div>
-    <div class="login-form__row login-form__row">
-      <input type="submit" class="button login-form__submit" value="Войти">
-      <button type="button" class="button modal__close login-form__close">Закрыть</button>
-    </div>
-  </form>
-</section>
-<div class="modal modal__wrapper"></div>
+{% include 'templates/_footer.html' %}
+{% include 'templates/_modal.html' %}
 <script src="js/main.js"></script>
 </body>
 </html>
