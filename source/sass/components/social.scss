@@ -49,6 +49,33 @@
   &:active {
     opacity: 0.3;
   }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+  &--vk::before {
+    mask-image: url("../images/sprite.svg#vk");
+  }
+
+  &--telegram::before {
+    mask-image: url("../images/sprite.svg#telegram");
+  }
+
+  &--youtube::before {
+    mask-image: url("../images/sprite.svg#youtube");
+  }
+
+  &--github::before {
+    mask-image: url("../images/sprite.svg#github");
+  }
 }
 
 .social__link-image {
