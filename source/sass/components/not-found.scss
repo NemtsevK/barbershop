@@ -1,0 +1,21 @@
+.not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 30px;
+  height: 100%;
+  padding: 40px 30px;
+  background-color: #353535;
+}
+
+.not-found__image {
+  width: 100%;
+  max-width: 300px;
+}
+
+.not-found__title {
+  margin: 0;
+  text-align: center;
+}

@@ -1,5 +1,5 @@
 <header class="header">
-  <a class="header__logo">
+  <a class="header__logo {% if currentPage != 'index' %}header__logo--inner{% endif %}">
     <picture>
       <source media="(min-width: 1200px)" srcset="images/brand/logo-desktop.svg">
       <source media="(min-width: 768px)" srcset="images/brand/logo-tablet.svg">
