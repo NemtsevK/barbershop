@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15" height="17" viewBox="0 0 15 17">
+<svg xmlns="http://www.w3.org/2000/svg" width="15" height="17" viewBox="0 0 15 17">
   <defs>
     <style>
       .cls-1 {
-        fill: #d1d1d1;
-        fill-rule: evenodd;
-        filter: url(#filter);
+      fill: #d1d1d1;
+      fill-rule: evenodd;
+      filter: url(#filter);
       }
     </style>
     <filter id="filter" x="719" y="388" width="15" height="17" filterUnits="userSpaceOnUse">
