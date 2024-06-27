@@ -3,14 +3,16 @@
 
 .appointment {
   padding-bottom: 40px;
-  color: #000;
+  color: #000000;
   background-color: $bg-lightgrey;
   border-top: 1px solid transparent;
+
   @include corner(40px, "f8f5f2");
 
   @media (min-width: $tablet) {
     padding-top: 30px;
     padding-bottom: 75px;
+
     @include corner-reverse(65px, "f8f5f2");
   }
 

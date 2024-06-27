@@ -2,19 +2,18 @@
 @use "../base/mixins" as *;
 
 .appointment-form {
-
   [type="text"],
   [type="email"],
   [type="tel"],
   textarea {
     padding: 15px;
     width: 100%;
-    color: #000;
+    color: #000000;
     background-color: #ffffff;
     border: 1px solid #e5ddd5;
 
     &::placeholder {
-      color: #000;
+      color: #000000;
     }
 
     &:hover {
@@ -29,7 +28,7 @@
 
   [type="radio"],
   [type="checkbox"] {
-    @include visually-hidden();
+    @include visually-hidden;
   }
 
   label {
@@ -165,7 +164,9 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+
     @include size(52px);
+
     border-radius: 50%;
     background-color: #ffffff;
     border: 1px solid #e5ddd5;
@@ -218,11 +219,12 @@
   top: 17px;
   left: 50%;
   transform: translateX(-50%);
+
   @include size(18px);
+
   border-radius: 50%;
   border: 1px solid #e5ddd5;
   background-color: #ffffff;
-
 }
 
 :not(:disabled) + .appointment-form__beard-type:hover,
@@ -247,8 +249,7 @@
   border: none;
 
   @media (min-width: $tablet) {
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     padding-top: 60px;
     border-top: 1px solid #e5ddd5;
   }
@@ -282,7 +283,9 @@
     position: absolute;
     top: 0;
     left: 0;
+
     @include size(36px);
+
     background-color: #ffffff;
     border: 1px solid #e5ddd5;
   }
@@ -293,7 +296,9 @@
   position: absolute;
   top: 10px;
   left: 7px;
+
   @include size(22px, 16px);
+
   background-image: url("../images/sprite.svg#checkbox");
 }
 

@@ -3,6 +3,7 @@
 
 .advantages {
   @include corner(40px, "242424");
+
   border-bottom: 1px solid transparent;
 
   @media (min-width: $tablet) {

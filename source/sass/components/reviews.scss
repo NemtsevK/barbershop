@@ -5,7 +5,8 @@
   padding-bottom: 10px;
   border-top: 1px solid transparent;
   background-color: $bg-lightgrey;
-  color: #000;
+  color: #000000;
+
   @include corner(40px, "f8f5f2");
 
   &::after {
@@ -174,6 +175,7 @@
 .reviews__button-image {
   @media (min-width: $tablet) {
     @include size(12px);
+
     position: relative;
     top: 5px;
   }

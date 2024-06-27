@@ -4,7 +4,7 @@
 .login-form {
   padding: 32px 20px 37px;
   background-color: $bg-lightgrey;
-  color: #000;
+  color: #000000;
 
   @media (min-width: $tablet) {
     padding: 50px 70px 63px;
@@ -49,7 +49,9 @@
     position: absolute;
     top: 9px;
     left: 7px;
+
     @include size(22px, 16px);
+
     background-image: url("../images/sprite.svg#checkbox");
   }
 
@@ -78,7 +80,9 @@
     position: absolute;
     top: 0;
     left: 0;
+
     @include size(33px);
+
     border: 1px solid #e5ddd5;
     background-color: #ffffff;
   }
@@ -87,7 +91,7 @@
 .login-form__input {
   width: 280px;
   padding: 15px;
-  color: #000;
+  color: #000000;
   background-color: #ffffff;
   border: 1px solid #e5ddd5;
 
@@ -98,7 +102,7 @@
   }
 
   &::placeholder {
-    color: #000;
+    color: #000000;
   }
 
   &:hover {
@@ -146,7 +150,9 @@
     position: absolute;
     top: 62px;
     right: -95px;
+
     @include size(26px);
+
     padding: 0;
     font-size: 0;
     background-color: transparent;

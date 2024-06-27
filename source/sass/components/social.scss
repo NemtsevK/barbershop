@@ -14,6 +14,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+
   @include reset-list;
 
   @media (min-width: $desktop) {
@@ -22,7 +23,7 @@
 }
 
 .social__item {
-  width: 33.333%;
+  width: 33.33%;
 
   @media (min-width: $desktop) {
     width: auto;
@@ -34,7 +35,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
   @include size(100%, 101px);
+
   border: 1px solid #3e3e3e;
   font-size: 0;
 

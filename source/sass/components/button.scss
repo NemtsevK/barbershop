@@ -8,7 +8,7 @@
   text-transform: uppercase;
   text-align: center;
   text-decoration: none;
-  color: #000;
+  color: #000000;
   border: 1px solid #e5ddd5;
 
   &:not(:disabled):hover {
@@ -17,16 +17,16 @@
 
   &:active {
     background-color: #d5c9bd;
-    color: rgba(#000, 0.3);
+    color: rgba(#000000, 30%);
 
     .button__image {
-      fill: rgba(#000, 0.3);
+      fill: rgba(#000000, 30%);
     }
   }
 
   &:disabled {
     .button__image {
-      fill: rgba(#000, 0.3);
+      fill: rgba(#000000, 30%);
     }
   }
 
@@ -40,7 +40,7 @@
 
     &:active {
       background-color: #252525;
-      color: rgba(#ffffff, 0.3);
+      color: rgba(#ffffff, 30%);
     }
   }
 }

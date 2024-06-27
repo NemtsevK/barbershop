@@ -5,6 +5,7 @@
   padding-top: 50px;
   padding-bottom: 20px;
   background-color: #353535;
+
   @include corner(40px, "353535");
 
   @media (min-width: $tablet) {

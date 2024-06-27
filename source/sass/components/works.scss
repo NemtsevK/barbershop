@@ -3,15 +3,18 @@
 
 .works {
   position: relative;
-  color: #000;
+  z-index: 1;
+  color: #000000;
   background-color: $bg-lightgrey;
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
+
   @include corner(40px, "f8f5f2");
-  z-index: 1;
+
 
   @media (min-width: $tablet) {
     padding-top: 30px;
+
     @include corner-reverse(65px, "f8f5f2");
   }
 
@@ -139,6 +142,7 @@
 
 .works__features {
   @include reset-list;
+
   display: flex;
   flex-wrap: wrap;
 

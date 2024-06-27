@@ -41,6 +41,7 @@
 .header__logo-image {
   @media (min-width: $tablet) {
     @include size(370px, 101px);
+
     margin-top: 55px;
   }
 

@@ -4,12 +4,13 @@
 .site-list {
   display: flex;
   flex-direction: column;
+
   @include reset-list;
+
   background-color: #826550;
 
   @media (min-width: $tablet) {
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     background-color: transparent;
   }
 }
@@ -57,7 +58,6 @@
   }
 
   &[href] {
-
     &:hover {
       background-color: #755a46;
 

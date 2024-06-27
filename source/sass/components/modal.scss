@@ -14,7 +14,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(#000, 0.3);
+  background-color: rgba(#000000, 30%);
   z-index: 1000;
 }
 
@@ -23,7 +23,7 @@
   top: 135px;
   left: 50%;
   transform: translateX(-50%);
-  box-shadow: 0 30px 50px 0 rgba(#000, 0.75);
+  box-shadow: 0 30px 50px 0 rgba(#000000, 75%);
   z-index: 1001;
 
   @media (min-width: $tablet) {
