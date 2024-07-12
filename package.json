@@ -1,9 +1,9 @@
 {
   "name": "barbershop",
-  "author": "Nemtsev Konstantin <nemtsevk@hotmail.com> (https://github.com/nemtsev-k)",
+  "author": "Nemtsev Konstantin <nemtsevk@hotmail.com> (https://github.com/NemtsevK)",
   "description": "Личный проект «Барбершоп Бородинский»",
-  "homepage": "https://nemtsev-k.github.io/barbershop/",
-  "repository": "https://github.com/nemtsev-k/barbershop",
+  "homepage": "https://nemtsevk.github.io/barbershop/",
+  "repository": "https://github.com/NemtsevK/barbershop",
   "private": true,
   "type": "module",
   "devDependencies": {
